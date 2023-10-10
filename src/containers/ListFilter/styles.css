@@ -1,6 +1,6 @@
 .filter {
   display: flex;
-  max-width: 330px;
+  width: 650px;
 
   &__form {
     display: flex;

@@ -1,0 +1,6 @@
+.list_item__container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  width: 150px;
+}

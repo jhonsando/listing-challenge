@@ -1,0 +1,7 @@
+.list-items__container {
+  width: 650px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  row-gap: 10px;
+  justify-content: space-between;
+}
