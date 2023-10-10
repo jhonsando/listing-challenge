@@ -1,12 +1,7 @@
 .filter {
   display: flex;
   width: 650px;
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-  }
+  flex-direction: column;
 }
 
 .filter__form {
@@ -32,7 +27,6 @@
     height: 2px;
     background: #ddd;
     border: none;
-    border-radius: 3px;
   }
 
   & input[type="range"]::-webkit-slider-thumb {

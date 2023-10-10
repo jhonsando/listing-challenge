@@ -1,20 +1,25 @@
 import React from "react";
 import "./styles.css";
+import { setFilters } from "reducers/bookingOptions/bookingOptions.actions";
+import { useAppDispatch } from "app/hooks";
 const ListFilter = (): JSX.Element => {
   const [bedrooms, setBedrooms] = React.useState(1);
   const [bathrooms, setBathrooms] = React.useState(1);
   const [parkings, setParkings] = React.useState(1);
   const [priceRange, setPriceRange] = React.useState(1);
-  const handleSubmit = React.useCallback(
-    (e: { preventDefault: () => void }) => {
-      e.preventDefault();
-      console.log("bedrooms", bedrooms);
-      console.log("bathrooms", bathrooms);
-      console.log("parkings", parkings);
-      console.log("priceRange", priceRange);
-    },
-    []
-  );
+  const dispatch = useAppDispatch();
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    const filterOptions = {
+      bedrooms,
+      bathrooms,
+      parkings,
+      priceRange,
+    };
+
+    dispatch(setFilters(filterOptions));
+  };
   return (
     <section className="filter">
       <form className="filter__form" onSubmit={handleSubmit}>
@@ -70,7 +75,7 @@ const ListFilter = (): JSX.Element => {
             className="filter__form__option--price-input"
             name="price-range"
             min={1}
-            max={200000}
+            max={1000000}
             required
             value={priceRange}
             onChange={(e) => setPriceRange(parseInt(e.target.value))}
@@ -80,6 +85,7 @@ const ListFilter = (): JSX.Element => {
           <button aria-label="search">Search</button>
         </div>
       </form>
+      <label>{`Price Range: ($1 - $${priceRange})`}</label>
     </section>
   );
 };

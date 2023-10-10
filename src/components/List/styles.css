@@ -2,6 +2,6 @@
   width: 650px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 150px);
-  row-gap: 10px;
+  row-gap: 25px;
   justify-content: space-between;
 }

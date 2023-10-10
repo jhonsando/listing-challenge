@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ListingPage from "pages/ListingPage";
 import ListingDetailsPage from "pages/ListingDetailsPage";
 
-const App = (): JSX.Element => {
+const AppRoutes = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Routes>
@@ -14,4 +14,4 @@ const App = (): JSX.Element => {
   );
 };
 
-export default App;
+export default AppRoutes;

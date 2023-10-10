@@ -3,4 +3,41 @@
   flex-direction: column;
   border: 1px solid #000;
   width: 150px;
+  & h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  & h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & h1,
+  h4 {
+    color: #232423;
+    font-size: 16px;
+  }
+
+  & h2 {
+    color: #4d4f4d;
+    font-size: 12px;
+  }
+
+  & h3 {
+    color: #717571;
+    font-size: 12px;
+  }
+
+  & h4 {
+    font-size: 18px;
+  }
+}
+
+.list_item__item-detail {
+  padding: 5px;
 }

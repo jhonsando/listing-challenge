@@ -17,9 +17,12 @@
     "jsx": "react-jsx",
     "baseUrl": "./src/",
     "paths": {
+      "app": ["./app/*"],
       "components": ["./components/*"],
       "containers": ["./containers/*"],
+      "models": ["./models/*"],
       "pages": ["./pages/*"],
+      "reducers": ["./reducers/*"],
       "services": ["./services/*"]
     }
   },

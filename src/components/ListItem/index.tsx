@@ -17,11 +17,19 @@ const ListItem = (listItemProps: ListItemPropsTypes): JSX.Element => {
       <div>
         <img alt={`Image for ${title}`} src={imageUrl} />
       </div>
-      <div>{title}</div>
-      <div>{location}</div>
-      <div>{`${beds} beds | ${baths} baths`}</div>
-      <div>{`$ ${price}`}</div>
-      <div>
+      <div className="list_item__item-detail">
+        <h1>{title}</h1>
+      </div>
+      <div className="list_item__item-detail">
+        <h2>{location}</h2>
+      </div>
+      <div className="list_item__item-detail">
+        <h3>{`${beds} beds | ${baths} baths`}</h3>
+      </div>
+      <div className="list_item__item-detail">
+        <h4>{`$ ${price}`}</h4>
+      </div>
+      <div className="list_item__item-detail">
         <button aria-label="View details">View Details</button>
       </div>
     </section>
