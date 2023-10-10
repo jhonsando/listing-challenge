@@ -1,0 +1,64 @@
+.filter {
+  display: flex;
+  max-width: 330px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+  }
+}
+
+.filter__form {
+  display: flex;
+  gap: 20px;
+}
+
+.filter__form__option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  & input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+  }
+
+  & input[type="range"] {
+    -webkit-appearance: none;
+  }
+
+  & input[type="range"]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 2px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+  }
+
+  & input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 3px;
+    background: #000;
+    margin-top: -3px;
+  }
+
+  & input[type="range"]:focus {
+    outline: none;
+  }
+
+  & input[type="range"]::before,
+  input[type="range"]::after {
+    content: "|";
+    font-weight: 800;
+  }
+}
+
+.filter__form__option--range-input {
+  width: 20px;
+  padding: 0 0 0 10px;
+}
+
+.filter__form__option--price-input {
+  width: 80px;
+}

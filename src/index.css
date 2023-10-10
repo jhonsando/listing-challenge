@@ -6,3 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.word--nowrap {
+  text-wrap: nowrap;
+}
+
+.v-align--center {
+  display: flex;
+  align-items: center;
+}
